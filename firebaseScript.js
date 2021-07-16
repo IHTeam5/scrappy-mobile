@@ -1,14 +1,24 @@
+import firebase from '@react-native-firebase';
+
 var secret = '6oZXi4R51KQsTrXODxQs5ZRmVQYNmwoeDciO9kRL'
 
-function getFirebaseUrl(jsonPath) {
-  return (
-    'https://composting-app-default-rtdb.firebaseio.com/' +
-    jsonPath +
-    '.json?auth=' +
-    secret
-  )
-}
-function syncMasterSheet(excelData) {
+firebase.initializeApp({
+  apiKey: 'AIzaSyDQC4B_wD3oMu3a_P9qEsXywReMMZ-C7tQ',
+  authDomain: 'composting-app.firebaseapp.com',
+  projectId: 'composting-app'
+});
+
+firebase.firestore();
+export default firebase;
+
+
+
+
+
+
+
+
+/*function syncMasterSheet(excelData) {
   var options = {
     method: 'put',
     contentType: 'application/json',
@@ -42,4 +52,4 @@ function start() {
     }
     syncMasterSheet(dataObject)
   }
-}
+} */
